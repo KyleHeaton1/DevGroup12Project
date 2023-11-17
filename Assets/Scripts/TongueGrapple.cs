@@ -55,11 +55,11 @@ public class TongueGrapple : MonoBehaviour
 
             float distancefromgrapplepoint = Vector3.Distance(player.transform.position, grapplepoint);
 
-            //joint.maxDistance = distancefromgrapplepoint * 0.8f;
-            //joint.minDistance = distancefromgrapplepoint * 0.1f;
+            joint.maxDistance = distancefromgrapplepoint * 0.8f;
+            joint.minDistance = distancefromgrapplepoint * 0.1f;
 
-            joint.spring = 5f;
-            joint.damper = 0f;
+            joint.spring = 2f;
+            joint.damper = 1f;
             joint.massScale = 4.5f;
         }
         
@@ -68,14 +68,14 @@ public class TongueGrapple : MonoBehaviour
     void TongueRetract()
     {
         lr.positionCount = 0;
-        lr.positionCount = 2;
         Destroy(joint);
+        lr.positionCount = 2;
+        
     }
 
     void Drawtongue()
     {
         if (!joint) return;
-        print("stillGoing");
         lr.SetPosition(0, player.transform.position);
         lr.SetPosition(1, grapplepoint);
     }
