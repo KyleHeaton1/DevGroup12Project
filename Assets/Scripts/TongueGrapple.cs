@@ -11,7 +11,9 @@ public class TongueGrapple : MonoBehaviour
     private Vector3 grapplepoint;
     private SpringJoint joint;
     private LineRenderer lr;
-
+    public float spring = 2f;
+    public float damper = 0f;
+    public float massscale = 2f;
 
     private void Awake()
     {
@@ -48,19 +50,22 @@ public class TongueGrapple : MonoBehaviour
         //checks if tongue would hit something
         if (Physics.Raycast(player.transform.position, direction, out RaycastHit hit, maxDistance))
         {
-            grapplepoint = hit.point;
-            joint = player.AddComponent<SpringJoint>();
-            joint.autoConfigureConnectedAnchor = false;
-            joint.connectedAnchor = grapplepoint;
+            if (hit.transform.CompareTag("Swingable"))
+            {
+                grapplepoint = hit.point;
+                joint = player.AddComponent<SpringJoint>();
+                joint.autoConfigureConnectedAnchor = false;
+                joint.connectedAnchor = grapplepoint;
 
-            float distancefromgrapplepoint = Vector3.Distance(player.transform.position, grapplepoint);
+                float distancefromgrapplepoint = Vector3.Distance(player.transform.position, grapplepoint);
 
-            joint.maxDistance = distancefromgrapplepoint * 0.8f;
-            joint.minDistance = distancefromgrapplepoint * 0.1f;
+                joint.maxDistance = distancefromgrapplepoint * 0.8f;
+                joint.minDistance = distancefromgrapplepoint * 0.1f;
 
-            joint.spring = 2f;
-            joint.damper = 1f;
-            joint.massScale = 4.5f;
+                joint.spring = spring;
+                joint.damper = damper;
+                joint.massScale = massscale;
+            }
         }
         
     }

@@ -20,7 +20,7 @@ public class jump : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        //if (Physics.Raycast(player.transform.position, (new Vector3(, out RaycastHit hit, 2))
 
         //Direction frog face
         movedirection = Input.GetAxisRaw("Horizontal");
@@ -38,7 +38,7 @@ public class jump : MonoBehaviour
         //Getting Jump power
         if (Input.GetKey("a") && isgrounded || Input.GetKey("d") && isgrounded)
         {
-            if (jumppower < 20)
+            if (jumppower < 10)
             {
                 jumppower += 0.025f;
                 currentjumpdirection = movedirection;
@@ -51,12 +51,13 @@ public class jump : MonoBehaviour
         {
             if (isgrounded)
             {
-                float horizontalMod = 1f;
-                if (jumppower > 10)
-                {
-                    horizontalMod = 0.5f;
-                }
-                rb.velocity = (new Vector2(currentjumpdirection*jumppower*horizontalMod, jumppower));
+                //float horizontalMod = 1f;
+                //if (jumppower > 10)
+                //{
+                //    horizontalMod = 0.5f;
+                //}
+
+                rb.velocity = (new Vector2(currentjumpdirection*Mathf.Sqrt(10*jumppower), 0.15f*(jumppower*jumppower)));
                 jumppower = 0f;
             }
             
