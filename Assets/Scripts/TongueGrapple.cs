@@ -14,6 +14,7 @@ public class TongueGrapple : MonoBehaviour
     public float spring = 2f;
     public float damper = 0f;
     public float massscale = 2f;
+    [HideInInspector] public bool isPaused = false;
 
     private void Awake()
     {
@@ -21,13 +22,11 @@ public class TongueGrapple : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && !isPaused)       
         {
-            
-            TongueShoot();
-            
+            TongueShoot(); 
         }
-        else if (Input.GetMouseButtonUp(0))
+        else if (Input.GetMouseButtonUp(0) && !isPaused)
         {
             TongueRetract();
         }
@@ -35,7 +34,7 @@ public class TongueGrapple : MonoBehaviour
     }
     private void LateUpdate()
     {
-        Drawtongue();
+         if(!isPaused) Drawtongue();
     }
 
 
@@ -70,7 +69,7 @@ public class TongueGrapple : MonoBehaviour
         
     }
 
-    void TongueRetract()
+    public void TongueRetract()
     {
         lr.positionCount = 0;
         Destroy(joint);
