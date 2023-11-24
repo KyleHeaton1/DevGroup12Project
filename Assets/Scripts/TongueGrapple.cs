@@ -58,7 +58,7 @@ public class TongueGrapple : MonoBehaviour
 
                 float distancefromgrapplepoint = Vector3.Distance(player.transform.position, grapplepoint);
 
-                joint.maxDistance = distancefromgrapplepoint * 0.8f;
+                joint.maxDistance = distancefromgrapplepoint * 0.7f;
                 joint.minDistance = distancefromgrapplepoint * 0.1f;
 
                 joint.spring = spring;
