@@ -49,7 +49,7 @@ public class TongueGrapple : MonoBehaviour
         //checks if tongue would hit something
         if (Physics.Raycast(player.transform.position, direction, out RaycastHit hit, maxDistance))
         {
-            if (hit.transform.CompareTag("Swingable"))
+            if (hit.transform.CompareTag("Swingable") && Vector3.Distance(player.transform.position, hit.point)<10f)
             {
                 grapplepoint = hit.point;
                 joint = player.AddComponent<SpringJoint>();

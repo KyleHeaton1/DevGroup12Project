@@ -57,7 +57,8 @@ public class jump : MonoBehaviour
                 //    horizontalMod = 0.5f;
                 //}
 
-                rb.velocity = (new Vector2(currentjumpdirection*Mathf.Sqrt(10*jumppower), 0.15f*(jumppower*jumppower)));
+                //rb.velocity = (new Vector2(currentjumpdirection*Mathf.Sqrt(10*jumppower), 0.15f*(jumppower*jumppower)));
+                rb.velocity = (new Vector2(currentjumpdirection * jumppower, 1.5f * jumppower));
                 jumppower = 0f;
             }
             
@@ -65,7 +66,13 @@ public class jump : MonoBehaviour
 
 
     }
-
+    private void OnCollisionStay(Collision collision)
+    {
+        if (collision.gameObject.CompareTag(("Ground")))
+        {
+            isgrounded = true;
+        }
+    }
 
 
     //ground detection
