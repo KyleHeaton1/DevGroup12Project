@@ -14,11 +14,16 @@ public class TongueGrapple : MonoBehaviour
     public float spring = 2f;
     public float damper = 0f;
     public float massscale = 2f;
+    public SpriteRenderer sr;
+    public Sprite tongueout;
+    public Sprite tongueshot;
+    public Color pink = new Vector4(255f/255f, 20f/255f, 147f/255f);
     [HideInInspector] public bool isPaused = false;
 
     private void Awake()
     {
         lr = GetComponent<LineRenderer>();
+        lr.material.SetColor("_Color", pink);
     }
     private void Update()
     {

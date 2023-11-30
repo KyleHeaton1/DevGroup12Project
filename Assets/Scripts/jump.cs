@@ -11,6 +11,9 @@ public class jump : MonoBehaviour
     public Rigidbody rb;
     public float currentjumpdirection;
     public SpriteRenderer sr;
+    public Sprite normalfrog;
+    public Sprite prepfrog;
+    public Sprite flyfrog;
     // Start is called before the first frame update
     void Start()
     {
@@ -37,7 +40,9 @@ public class jump : MonoBehaviour
 
         //Getting Jump power
         if (Input.GetKey("a") && isgrounded || Input.GetKey("d") && isgrounded)
+
         {
+            sr.sprite = prepfrog;
             if (jumppower < 10)
             {
                 jumppower += 0.025f;
@@ -49,6 +54,7 @@ public class jump : MonoBehaviour
         //Jumping
         if(Input.GetKeyUp("a") || Input.GetKeyUp("d"))
         {
+            sr.sprite = flyfrog;
             if (isgrounded)
             {
                 //float horizontalMod = 1f;
@@ -70,6 +76,7 @@ public class jump : MonoBehaviour
     {
         if (collision.gameObject.CompareTag(("Ground")))
         {
+            //sr.sprite = normalfrog;
             isgrounded = true;
         }
     }
@@ -80,6 +87,7 @@ public class jump : MonoBehaviour
     {
         if (collision.gameObject.CompareTag(("Ground")))
         {
+            sr.sprite = normalfrog;
             isgrounded = true;
         }
     }
@@ -87,6 +95,7 @@ public class jump : MonoBehaviour
     {
         if (collision.gameObject.CompareTag(("Ground")))
         {
+            sr.sprite = flyfrog;
             isgrounded = false;
         }
     }

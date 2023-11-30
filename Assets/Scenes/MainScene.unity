@@ -1337,7 +1337,7 @@ GameObject:
   - component: {fileID: 142149026}
   - component: {fileID: 142149027}
   m_Layer: 0
-  m_Name: chillfrog
+  m_Name: FrogSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1351,9 +1351,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 142149025}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.15, y: 0.61, z: 0}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1880360113}
@@ -1399,7 +1399,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6103b4e48f985e04081f348a54ece02a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c51ca57d1c74b7145b06fba9087b1163, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -10381,7 +10381,7 @@ GameObject:
   - component: {fileID: 1833776232}
   m_Layer: 0
   m_Name: Sphere
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10892,7 +10892,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -230.64, y: -79.2, z: 3}
-  m_LocalScale: {x: 0.75, y: 0.75, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 142149026}
@@ -10919,6 +10919,9 @@ MonoBehaviour:
   rb: {fileID: 1880360111}
   currentjumpdirection: 0
   sr: {fileID: 142149027}
+  normalfrog: {fileID: 21300000, guid: c51ca57d1c74b7145b06fba9087b1163, type: 3}
+  prepfrog: {fileID: 21300000, guid: 91a62515b7f392b4581b7f0939ce4042, type: 3}
+  flyfrog: {fileID: 21300000, guid: f8593d842ad9dd143bc2f87d8d29d47e, type: 3}
 --- !u!65 &1880360115
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10938,8 +10941,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.4514368, y: 1, z: 0.4695251}
-  m_Center: {x: 0, y: -0.63, z: 0}
+  m_Size: {x: 1.4514368, y: 0.9313202, z: 0.4695251}
+  m_Center: {x: 0, y: -0.97330725, z: 0}
 --- !u!1 &1892863287
 GameObject:
   m_ObjectHideFlags: 0
@@ -11388,7 +11391,7 @@ Transform:
   m_GameObject: {fileID: 1956862410}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 46.1, y: -87.3, z: -0.17000008}
+  m_LocalPosition: {x: 48.46, y: -84.48, z: -0.17000008}
   m_LocalScale: {x: 1.3333334, y: 2.9241214, z: 1.6}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12621,7 +12624,7 @@ Transform:
   m_GameObject: {fileID: 2079574897}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 3.15, y: 2.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12644,6 +12647,10 @@ MonoBehaviour:
   spring: 3.06
   damper: 0
   massscale: 6
+  sr: {fileID: 0}
+  tongueout: {fileID: 0}
+  tongueshot: {fileID: 0}
+  pink: {r: 1, g: 0.078431375, b: 0.5764706, a: 0}
   isPaused: 0
 --- !u!120 &2079574900
 LineRenderer:
@@ -12710,7 +12717,7 @@ LineRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0, g: 1, b: 0.044611454, a: 1}
+      key0: {r: 0.8679245, g: 0.21698113, b: 0.21698113, a: 1}
       key1: {r: 1, g: 1, b: 1, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
