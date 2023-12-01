@@ -14,6 +14,7 @@ public class jump : MonoBehaviour
     public Sprite normalfrog;
     public Sprite prepfrog;
     public Sprite flyfrog;
+    public bool aboveground = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +24,7 @@ public class jump : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         //if (Physics.Raycast(player.transform.position, (new Vector3(, out RaycastHit hit, 2))
 
         //Direction frog face
@@ -90,7 +92,15 @@ public class jump : MonoBehaviour
             sr.sprite = normalfrog;
             isgrounded = true;
         }
+
     }
+
+
+
+
+
+
+
     private void OnCollisionExit(Collision collision)
     {
         if (collision.gameObject.CompareTag(("Ground")))
