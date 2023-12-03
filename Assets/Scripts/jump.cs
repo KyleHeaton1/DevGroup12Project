@@ -15,15 +15,17 @@ public class jump : MonoBehaviour
     public Sprite prepfrog;
     public Sprite flyfrog;
     public bool aboveground = false;
+    public ValueSlider _jumpUI;
     // Start is called before the first frame update
     void Start()
     {
-        
+        if(_jumpUI != null)_jumpUI.SetMaxValue(10);
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(_jumpUI != null)_jumpUI.SetValue(jumppower);
         
         //if (Physics.Raycast(player.transform.position, (new Vector3(, out RaycastHit hit, 2))
 
