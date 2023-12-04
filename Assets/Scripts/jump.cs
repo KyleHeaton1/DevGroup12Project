@@ -16,6 +16,7 @@ public class jump : MonoBehaviour
     public Sprite flyfrog;
     public bool aboveground = false;
     public ValueSlider _jumpUI;
+    public ParticleSystem _particle;
     // Start is called before the first frame update
     void Start()
     {
@@ -93,6 +94,7 @@ public class jump : MonoBehaviour
         {
             sr.sprite = normalfrog;
             isgrounded = true;
+            _particle.Play();
         }
 
     }
