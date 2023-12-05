@@ -17,6 +17,8 @@ public class jump : MonoBehaviour
     public bool aboveground = false;
     public ValueSlider _jumpUI;
     public ParticleSystem _particle;
+    public AudioSource landsound;
+    public AudioSource jumpsound;
     // Start is called before the first frame update
     void Start()
     {
@@ -50,7 +52,7 @@ public class jump : MonoBehaviour
             sr.sprite = prepfrog;
             if (jumppower < 10)
             {
-                jumppower += 0.05f;
+                jumppower += 0.1f;
                 currentjumpdirection = movedirection;
             }
         }
@@ -60,6 +62,7 @@ public class jump : MonoBehaviour
         if(Input.GetKeyUp("a") || Input.GetKeyUp("d"))
         {
             sr.sprite = flyfrog;
+            jumpsound.Play();
             if (isgrounded)
             {
                 //float horizontalMod = 1f;
@@ -94,6 +97,7 @@ public class jump : MonoBehaviour
         {
             sr.sprite = normalfrog;
             isgrounded = true;
+            landsound.Play();
             _particle.Play();
         }
 
