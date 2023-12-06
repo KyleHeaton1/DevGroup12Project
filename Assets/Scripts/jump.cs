@@ -51,7 +51,7 @@ public class jump : MonoBehaviour
 
         {
             sr.sprite = prepfrog;
-            if (jumppower < 10)
+            if (jumppower <= 10)
             {
                 jumppower += jumpincriment;
                 currentjumpdirection = movedirection;
