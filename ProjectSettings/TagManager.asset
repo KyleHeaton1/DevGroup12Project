@@ -8,6 +8,7 @@ TagManager:
   - Swingable
   - Portal
   - kill
+  - end
   layers:
   - Default
   - TransparentFX

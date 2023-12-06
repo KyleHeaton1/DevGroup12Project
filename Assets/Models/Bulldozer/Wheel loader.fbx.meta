@@ -3,7 +3,102 @@ guid: cca5836b715f5664592b3c560d8f0e4f
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.001
+    second: {fileID: 2100000, guid: 6861aaa3b3fa4194a96d7316d17bb8bf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.002
+    second: {fileID: 2100000, guid: bf7299028299f26409f151d80d3fc29a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.003
+    second: {fileID: 2100000, guid: efdf229afcdb5ef409e267176827e3ae, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.004
+    second: {fileID: 2100000, guid: 9d985f48f27b27747941007a2d99d72c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.009
+    second: {fileID: 2100000, guid: 406dc19212c692c4292e6d8ccec13709, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.012
+    second: {fileID: 2100000, guid: dcfad54471cf83c4fbebda5c187aaf71, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: anisotropy
+    second: {fileID: 2100000, guid: 307e809dc28384842a37a7b717c90503, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: black rough plastic
+    second: {fileID: 2100000, guid: f6e3bd5c5f3771447a250287843514da, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: brushed_metal
+    second: {fileID: 2100000, guid: 3502012a39229d548a13aebbda8dea7f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: brushed_metal.001
+    second: {fileID: 2100000, guid: ce44e1233e3f6a34596d2f8237076e70, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: clear_glass
+    second: {fileID: 2100000, guid: 67b3660b97dbe6340ab79839de7ec1fd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: clearcoat_plastic
+    second: {fileID: 2100000, guid: f207a0c8d64546b4d8571a5823b2af2b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: freshnel shader
+    second: {fileID: 2100000, guid: 8e2ebfc6c0aebe84f8127d4ca287ce44, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: freshnel shader.001
+    second: {fileID: 2100000, guid: f64d1cd6a6c2bb94a8d6c48682688e38, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: freshnel shader.002
+    second: {fileID: 2100000, guid: adc8e47af8af73b4b91d6170d4dbbcff, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: plastic
+    second: {fileID: 2100000, guid: 0eb86048ee2fbfa4d888de5aae1c3526, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: plastic.001
+    second: {fileID: 2100000, guid: 6ff1e75e29f933340bd623e4241d65dc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: plastic.002
+    second: {fileID: 2100000, guid: 2565b42c5df6b3247b6025b7c4961924, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: plastic_2
+    second: {fileID: 2100000, guid: e2edd67814473ed48bc773f12f6c80ad, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

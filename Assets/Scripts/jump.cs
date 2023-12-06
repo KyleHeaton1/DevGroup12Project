@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
 public class jump : MonoBehaviour
 {
 
@@ -19,8 +19,10 @@ public class jump : MonoBehaviour
     public ParticleSystem _particle;
     public AudioSource landsound;
     public AudioSource jumpsound;
+    public AudioSource finishsound;
     public float jumpincriment = 0.1f;
     public float timesincestart;
+    public GameObject timer;
     // Start is called before the first frame update
     void Start()
     {
@@ -107,6 +109,9 @@ public class jump : MonoBehaviour
         else if (collision.gameObject.CompareTag("end"))
         {
             timesincestart = Time.realtimeSinceStartup;
+            timer.GetComponent<TextMeshProUGUI>().text = "You took " + timesincestart.ToString() + " seconds to reach the hellicopter. Well Done!" ;
+            finishsound.Play();
+
         }
     }
 
