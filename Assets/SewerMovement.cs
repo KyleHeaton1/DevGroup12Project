@@ -36,5 +36,11 @@ public class SewerMovement : MonoBehaviour
             }
 
         }
+        else if (collision.gameObject.CompareTag(("kill")))
+        {
+            transform.position = new Vector3(-248.3f, -166.6f, transform.position.z);
+            aboveground = false;
+
+        }
     }
 }

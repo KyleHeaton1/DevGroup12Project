@@ -19,6 +19,7 @@ public class jump : MonoBehaviour
     public ParticleSystem _particle;
     public AudioSource landsound;
     public AudioSource jumpsound;
+    public float jumpincriment = 0.1f;
     // Start is called before the first frame update
     void Start()
     {
@@ -52,7 +53,7 @@ public class jump : MonoBehaviour
             sr.sprite = prepfrog;
             if (jumppower < 10)
             {
-                jumppower += 0.1f;
+                jumppower += jumpincriment;
                 currentjumpdirection = movedirection;
             }
         }
@@ -87,6 +88,7 @@ public class jump : MonoBehaviour
             //sr.sprite = normalfrog;
             isgrounded = true;
         }
+
     }
 
 
