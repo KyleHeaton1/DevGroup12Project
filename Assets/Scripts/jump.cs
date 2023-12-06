@@ -20,10 +20,12 @@ public class jump : MonoBehaviour
     public AudioSource landsound;
     public AudioSource jumpsound;
     public float jumpincriment = 0.1f;
+    public float timesincestart;
     // Start is called before the first frame update
     void Start()
     {
         if(_jumpUI != null)_jumpUI.SetMaxValue(10);
+        
     }
 
     // Update is called once per frame
@@ -102,7 +104,10 @@ public class jump : MonoBehaviour
             landsound.Play();
             _particle.Play();
         }
-
+        else if (collision.gameObject.CompareTag("end"))
+        {
+            timesincestart = Time.realtimeSinceStartup;
+        }
     }
 
 
