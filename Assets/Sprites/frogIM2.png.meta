@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: de20688dc6d43ec4db04bed6a13ce401
+guid: 96bdc530f0412a54a83d0a43b42d18ef
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -21,7 +21,7 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
     flipGreenChannel: 0
-  isReadable: 1
+  isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
@@ -95,13 +95,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: frogIMG_0
+      name: frogIM2_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1484
-        height: 746
+        width: 1344
+        height: 672
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -109,8 +109,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eb165c6e4286a8345baf8c40dd28f9bb
-      internalID: -1781526466
+      spriteID: fc270e87bee1abc47a93728d76a47e20
+      internalID: 327594820
       vertices: []
       indices: 
       edges: []
@@ -118,7 +118,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 9743c431965252a4c96ce5862cc93481
+    spriteID: 5205e75d4a5e75944ab674931183128a
     internalID: 0
     vertices: []
     indices: 
@@ -126,7 +126,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      frogIMG_0: -1781526466
+      frogIM2_0: 327594820
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
